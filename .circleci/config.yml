@@ -1,0 +1,14 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - run: echo $HELLO
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build:
+          context: hello_world
