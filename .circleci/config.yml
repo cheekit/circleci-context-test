@@ -15,7 +15,7 @@ workflows:
   build-2:
     jobs:
       - build:
-          context: hello-world
+          context: "hello-world"
   build-3:
     jobs:
       - build:
