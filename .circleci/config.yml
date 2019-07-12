@@ -12,3 +12,5 @@ workflows:
     jobs:
       - build:
           context: hello_world
+      - build:
+          context: TEST
