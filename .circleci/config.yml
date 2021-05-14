@@ -8,19 +8,10 @@ jobs:
       - run: echo $HELLO
 workflows:
   version: 2
-  build-1:
+  use-context:
     jobs:
       - build:
           context: hello_world
-  build-2:
+  without-context:
     jobs:
-      - build:
-          context: "hello-world"
-  build-3:
-    jobs:
-      - build:
-          context: TEST
-  build-4:
-    jobs:
-      - build:
-          context: test-test
+      - build
