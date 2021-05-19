@@ -10,5 +10,9 @@ workflows:
   version: 2
   use-context:
     jobs:
+      - hold: # <<< A job that will require manual approval in the CircleCI web application.
+          type: approval 
       - build:
           context: hello_world
+          requires:
+            - hold
