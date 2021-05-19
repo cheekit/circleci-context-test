@@ -16,3 +16,8 @@ workflows:
           context: hello_world
           requires:
             - hold
+      - build:
+          name: build-1
+          context: hello_world
+          requires:
+            - build
