@@ -12,6 +12,3 @@ workflows:
     jobs:
       - build:
           context: hello_world
-  without-context:
-    jobs:
-      - build
